@@ -1,0 +1,48 @@
+.item {
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.anchor {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+}
+
+.imageWrapper {
+  display: flex;
+  justify-self: center;
+  height: 128px;
+  position: relative;
+  width: 128px;
+}
+
+.infoWrapper {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  width: 100%;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.price {
+  color: #0000ff;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  margin-bottom: 16px;
+}
