@@ -1,0 +1,11 @@
+.header {
+  display: flex;
+  justify-content: center;
+  grid-area: header;
+}
+
+.logoWrapper {
+  height: 88px;
+  position: relative;
+  width: 104px;
+}
