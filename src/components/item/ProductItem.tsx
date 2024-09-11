@@ -2,9 +2,13 @@ import Image from "next/image";
 import styles from "@/components/item/ProductItem.module.css";
 import { formatPrice } from "@/utils/formatPrice";
 import Link from "next/link";
-import { ProductType } from "../list/product-list/ProductList";
+import { ProductType } from "@/types/product";
 
-export default function ProductItem({ product }: { product: ProductType }) {
+interface ProductItemProps {
+  product: ProductType;
+}
+
+export default function ProductItem({ product }: ProductItemProps) {
   return (
     <ul key={product.id} className={styles.item}>
       <Link href={`/products/${product.id}`} className={styles.anchor}>
