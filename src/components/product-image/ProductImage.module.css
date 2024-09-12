@@ -18,9 +18,12 @@
 @media (min-width: 1024px) {
   .wrapper {
     grid-area: image;
-    /* position: fixed;
+  }
+
+  .product {
+    position: fixed;
     left: 16px;
     transform: translateX(50%);
-    top: 25vh; */
+    top: 25vh;
   }
 }

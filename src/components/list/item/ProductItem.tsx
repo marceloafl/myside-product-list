@@ -17,7 +17,7 @@ export default function ProductItem({ product }: ProductItemProps) {
         <ProductImage
           alt={product.title}
           imageSrc={product.image}
-          page="product"
+          page="main"
         />
         <ProductMainInfo
           title={product.title}
