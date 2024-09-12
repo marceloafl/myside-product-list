@@ -17,6 +17,7 @@
 }
 
 .description {
+  box-sizing: border-box;
   display: -webkit-box;
   line-height: 1.25rem;
   margin-bottom: 16px;
@@ -34,6 +35,7 @@
   background-color: #ecedef;
   border: 1px solid #ecedef;
   border-radius: 0.4rem;
+  box-sizing: border-box;
   color: #474d57;
   cursor: pointer;
   display: flex;
@@ -42,4 +44,10 @@
   height: 2rem;
   padding: 1rem 1.2rem;
   width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .wrapper {
+    grid-area: main;
+  }
 }

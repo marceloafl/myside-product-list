@@ -3,9 +3,10 @@ import { mockProducts } from "@/types/product";
 import { formatPrice } from "@/utils/formatPrice";
 import Image from "next/image";
 import { useState } from "react";
-import ProductMainInfo from "../product-main-info/ProductMainInfo";
-import ProductTechInfo from "../product-tech-info/ProductTechInfo";
-import AddToCartButton from "../button/add-to-cart/AddToCart";
+import ProductMainInfo from "@/components/product-main-info/ProductMainInfo";
+import ProductTechInfo from "@/components/product-tech-info/ProductTechInfo";
+import AddToCartButton from "@/components/button/add-to-cart/AddToCart";
+import ProductImage from "@/components/product-image/ProductImage";
 
 const product = mockProducts[0];
 
@@ -18,9 +19,11 @@ export default function ProductDetails() {
 
   return (
     <section className={styles.section}>
-      <div className={styles.imageWrapper}>
-        <Image alt={product.title} src={product.image} fill />
-      </div>
+      <ProductImage
+        alt={product.title}
+        imageSrc={product.image}
+        page="product"
+      />
       <ProductMainInfo
         title={product.title}
         price={product.price}
@@ -34,7 +37,9 @@ export default function ProductDetails() {
         color={product.color}
         category={product.category}
       />
-      <AddToCartButton />
+      <div className={styles.buttonWrapper}>
+        <AddToCartButton />
+      </div>
     </section>
   );
 }

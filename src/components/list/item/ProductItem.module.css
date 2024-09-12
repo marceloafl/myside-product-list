@@ -5,17 +5,10 @@
 
 .anchor {
   align-items: center;
+  box-sizing: border-box;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   gap: 16px;
   padding: 16px;
-}
-
-.imageWrapper {
-  display: flex;
-  justify-self: center;
-  height: 128px;
-  position: relative;
-  width: 128px;
 }

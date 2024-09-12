@@ -1,0 +1,26 @@
+.wrapper {
+  display: flex;
+  justify-self: center;
+  height: 128px;
+  position: relative;
+}
+
+.main {
+  height: 128px;
+  width: 128px;
+}
+
+.product {
+  height: 288px;
+  width: 288px;
+}
+
+@media (min-width: 1024px) {
+  .wrapper {
+    grid-area: image;
+    position: fixed;
+    left: 16px;
+    transform: translateX(50%);
+    top: 25vh;
+  }
+}

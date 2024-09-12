@@ -17,3 +17,9 @@
 .techInfo {
   text-transform: capitalize;
 }
+
+@media (min-width: 1024px) {
+  .wrapper {
+    grid-area: tech;
+  }
+}
