@@ -37,3 +37,13 @@ export async function getProductById(id: string): Promise<ProductType | null> {
     return null;
   }
 }
+
+export async function getAllCategories() {
+  try {
+    const response = await fetch(`${baseUrl}/category`);
+    const data = await response.json();
+    return data.categories;
+  } catch (error) {
+    console.error(error);
+  }
+}

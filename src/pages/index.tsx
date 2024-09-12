@@ -1,21 +1,27 @@
 import ProductList from "@/components/list/product-list/ProductList";
-import { getAllProducts } from "@/services/products-api/requests";
+import {
+  getAllProducts,
+  getAllCategories,
+} from "@/services/products-api/requests";
 import { ProductType } from "@/types/product";
 
 interface HomeProps {
   products: ProductType[];
+  categories: string[];
 }
 
-export default function Home({ products }: HomeProps) {
-  return <ProductList products={products} />;
+export default function Home({ products, categories }: HomeProps) {
+  return <ProductList products={products} categories={categories} />;
 }
 
 export async function getStaticProps() {
   try {
     const products = await getAllProducts(1);
+    const categories = await getAllCategories();
     return {
       props: {
         products,
+        categories,
       },
     };
   } catch (error) {

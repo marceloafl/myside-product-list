@@ -1,0 +1,33 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.label {
+  font-weight: 700;
+}
+
+.dropdown {
+  align-items: center;
+  border: solid 1px var(--light-grey);
+  border-radius: 0.4rem;
+  box-sizing: border-box;
+  color: var(--dark-grey);
+  display: flex;
+  font-size: 1rem;
+  font-weight: 700;
+  height: 56px;
+  outline-color: var(--dark-grey);
+  padding: 8px;
+  width: 100%;
+  max-width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .wrapper {
+    grid-column: 2 / 3;
+    grid-row: 1 / 1;
+  }
+}

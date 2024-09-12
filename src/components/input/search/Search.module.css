@@ -1,0 +1,33 @@
+.wrapper {
+  align-items: center;
+  background-color: var(--light-grey);
+  border: solid 1px var(--light-grey);
+  border-radius: 0.4rem;
+  box-sizing: border-box;
+  display: flex;
+  gap: 8px;
+  height: 56px;
+  margin: 16px 0;
+  padding: 8px 16px;
+}
+
+.label {
+  font-weight: 700;
+}
+
+.input {
+  background-color: transparent;
+  border: none;
+  color: var(--dark-grey);
+  font-size: 1rem;
+  font-weight: 700;
+  outline: none;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .wrapper {
+    grid-column: 1 / 2;
+    grid-row: 1 / 1;
+  }
+}
