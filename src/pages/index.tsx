@@ -1,10 +1,9 @@
 import ProductList from "@/components/list/product-list/ProductList";
 import { getAllProducts } from "@/services/products-api/requests";
-import { mockProducts, ProductType } from "@/types/product";
+import { ProductType } from "@/types/product";
 
 interface HomeProps {
   products: ProductType[];
-  error: boolean;
 }
 
 export default function Home({ products }: HomeProps) {

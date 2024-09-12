@@ -9,15 +9,31 @@ export async function getAllProducts(
 ): Promise<ProductType[]> {
   try {
     const response = await fetch(`${baseUrl}?page=${page}&limit=${limit}`);
-    const data = await response.json();
 
     if (!response.ok) {
       throw new Error(`${response.status}`);
     }
 
+    const data = await response.json();
     return data.products;
   } catch (error) {
     console.error(error);
     return [];
+  }
+}
+
+export async function getProductById(id: string): Promise<ProductType | null> {
+  try {
+    const response = await fetch(`${baseUrl}/${id}`);
+
+    if (!response.ok) {
+      throw new Error(`${response.status}`);
+    }
+
+    const data = await response.json();
+    return data.product;
+  } catch (error) {
+    console.error(error);
+    return null;
   }
 }

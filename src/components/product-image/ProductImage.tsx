@@ -15,7 +15,13 @@ export default function ProductImage({
   const imageSize = styles[page] || styles.mainPage;
   return (
     <div className={`${styles.wrapper} ${imageSize}`}>
-      <Image alt={alt} src={imageSrc} fill priority />
+      <Image
+        alt={alt}
+        src={imageSrc}
+        fill
+        priority
+        sizes="(max-width: 768px) 128px, (max-width: 1024px) 288px, 100vw"
+      />
     </div>
   );
 }

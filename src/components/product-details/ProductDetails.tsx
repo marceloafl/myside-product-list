@@ -1,7 +1,5 @@
 import styles from "@/components/product-details/ProductDetails.module.css";
-import { mockProducts } from "@/types/product";
-import { formatPrice } from "@/utils/formatPrice";
-import Image from "next/image";
+import { mockProducts, ProductType } from "@/types/product";
 import { useState } from "react";
 import ProductMainInfo from "@/components/product-main-info/ProductMainInfo";
 import ProductTechInfo from "@/components/product-tech-info/ProductTechInfo";
@@ -10,7 +8,11 @@ import ProductImage from "@/components/product-image/ProductImage";
 
 const product = mockProducts[0];
 
-export default function ProductDetails() {
+interface ProductDetailsProps {
+  product: ProductType;
+}
+
+export default function ProductDetails({ product }: ProductDetailsProps) {
   const [collapsed, setCollapsed] = useState(true);
 
   const handleCollapse = () => {
