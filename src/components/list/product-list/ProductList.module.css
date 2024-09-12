@@ -13,13 +13,7 @@
   }
 }
 
-@media (min-width: 1024px) {
-  .list {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (min-width: 1367px) {
+@media (min-width: 1366px) {
   .list {
     grid-template-columns: repeat(4, 1fr);
   }
