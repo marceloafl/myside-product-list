@@ -15,7 +15,7 @@ export default function ProductImage({
   const imageSize = styles[page] || styles.mainPage;
   return (
     <div className={`${styles.wrapper} ${imageSize}`}>
-      <Image alt={alt} src={imageSrc} fill />
+      <Image alt={alt} src={imageSrc} fill priority />
     </div>
   );
 }

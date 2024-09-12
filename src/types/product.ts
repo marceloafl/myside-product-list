@@ -45,7 +45,7 @@ export const mockProducts: ProductType[] = [
     discount: 4,
   },
   {
-    id: 1,
+    id: 3,
     title:
       "Sony WH-1000XM3 Bluetooth Wireless Over Ear Headphones with Mic (Silver)",
     image:
@@ -60,7 +60,7 @@ export const mockProducts: ProductType[] = [
     discount: 11,
   },
   {
-    id: 2,
+    id: 4,
     title: "Microsoft Xbox X/S Wireless Controller Robot White",
     image:
       "https://storage.googleapis.com/fir-auth-1c3bc.appspot.com/1692255251854-xbox.jpg",
@@ -75,7 +75,7 @@ export const mockProducts: ProductType[] = [
     discount: 4,
   },
   {
-    id: 1,
+    id: 5,
     title:
       "Sony WH-1000XM3 Bluetooth Wireless Over Ear Headphones with Mic (Silver)",
     image:
@@ -90,7 +90,7 @@ export const mockProducts: ProductType[] = [
     discount: 11,
   },
   {
-    id: 2,
+    id: 6,
     title: "Microsoft Xbox X/S Wireless Controller Robot White",
     image:
       "https://storage.googleapis.com/fir-auth-1c3bc.appspot.com/1692255251854-xbox.jpg",
@@ -105,7 +105,7 @@ export const mockProducts: ProductType[] = [
     discount: 4,
   },
   {
-    id: 1,
+    id: 7,
     title:
       "Sony WH-1000XM3 Bluetooth Wireless Over Ear Headphones with Mic (Silver)",
     image:
@@ -120,7 +120,7 @@ export const mockProducts: ProductType[] = [
     discount: 11,
   },
   {
-    id: 2,
+    id: 8,
     title: "Microsoft Xbox X/S Wireless Controller Robot White",
     image:
       "https://storage.googleapis.com/fir-auth-1c3bc.appspot.com/1692255251854-xbox.jpg",
@@ -135,7 +135,7 @@ export const mockProducts: ProductType[] = [
     discount: 4,
   },
   {
-    id: 1,
+    id: 9,
     title:
       "Sony WH-1000XM3 Bluetooth Wireless Over Ear Headphones with Mic (Silver)",
     image:

@@ -10,7 +10,7 @@ export default function ProductList({ products }: ProductListProps) {
   return (
     <li className={styles.list}>
       {products.map((product) => (
-        <ProductItem product={product} />
+        <ProductItem key={product.id} product={product} />
       ))}
     </li>
   );
