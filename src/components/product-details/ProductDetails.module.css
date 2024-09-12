@@ -8,35 +8,3 @@
   position: relative;
   height: 288px;
 }
-
-/*----*/
-
-/* .infoWrapper {
-  display: flex;
-  gap: 16px;
-  flex-direction: column;
-  width: 100%;
-}
-
-.title {
-  font-weight: 700;
-  font-size: 20px;
-}
-
-.price {
-  color: #0000ff;
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.description {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  margin-bottom: 16px;
-}
-
-.descriptionCollapsed {
-  -webkit-line-clamp: 3;
-} */

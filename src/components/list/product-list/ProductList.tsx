@@ -1,5 +1,5 @@
 import styles from "@/components/list/product-list/ProductList.module.css";
-import ProductItem from "@/components/item/ProductItem";
+import ProductItem from "@/components/list/item/ProductItem";
 import { ProductType } from "@/types/product";
 
 interface ProductListProps {

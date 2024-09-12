@@ -35,7 +35,6 @@ export default function ProductDetails() {
         category={product.category}
       />
       <AddToCartButton />
-      {/* <button>Adicionar ao Carrinho</button> */}
     </section>
   );
 }

@@ -1,9 +1,9 @@
 import Image from "next/image";
-import styles from "@/components/item/ProductItem.module.css";
+import styles from "@/components/list/item/ProductItem.module.css";
 import { formatPrice } from "@/utils/formatPrice";
 import Link from "next/link";
 import { ProductType } from "@/types/product";
-import ProductMainInfo from "../product-main-info/ProductMainInfo";
+import ProductMainInfo from "../../product-main-info/ProductMainInfo";
 
 interface ProductItemProps {
   product: ProductType;
