@@ -1,0 +1,19 @@
+.wrapper {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  width: 100%;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-weight: 700;
+}
+
+.techInfo {
+  text-transform: capitalize;
+}

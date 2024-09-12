@@ -3,6 +3,7 @@ import styles from "@/components/item/ProductItem.module.css";
 import { formatPrice } from "@/utils/formatPrice";
 import Link from "next/link";
 import { ProductType } from "@/types/product";
+import ProductMainInfo from "../product-main-info/ProductMainInfo";
 
 interface ProductItemProps {
   product: ProductType;
@@ -15,11 +16,12 @@ export default function ProductItem({ product }: ProductItemProps) {
         <div className={styles.imageWrapper}>
           <Image alt={product.title} src={product.image} fill />
         </div>
-        <div className={styles.infoWrapper}>
-          <h2 className={styles.title}>{product.title}</h2>
-          <p className={styles.price}>{formatPrice(product.price)}</p>
-          <p className={styles.description}>{product.description}</p>
-        </div>
+        <ProductMainInfo
+          title={product.title}
+          price={product.price}
+          description={product.description}
+          collapsed={true}
+        />
       </Link>
     </ul>
   );
