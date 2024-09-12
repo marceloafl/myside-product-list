@@ -1,6 +1,6 @@
 .button {
-  background-color: #ff3b49;
-  border: 1px solid #ff3b49;
+  background-color: var(--primary-red);
+  border: 1px solid var(--primary-red);
   border-radius: 0.4rem;
   color: #ffffff;
   cursor: pointer;

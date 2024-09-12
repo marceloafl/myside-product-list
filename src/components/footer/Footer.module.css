@@ -1,5 +1,9 @@
 .footer {
+  border-top: solid 1px var(--light-grey);
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 32px 0;
   text-align: center;
 }

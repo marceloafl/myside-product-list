@@ -8,7 +8,9 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <section className={styles.page}>
       <Header />
-      <Component {...pageProps} />
+      <div className={styles.main}>
+        <Component {...pageProps} />
+      </div>
       <Footer />
     </section>
   );

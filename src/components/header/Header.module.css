@@ -1,7 +1,9 @@
 .header {
+  border: solid 1px var(--light-grey);
+  box-sizing: border-box;
   display: flex;
-  justify-content: center;
   grid-area: header;
+  padding: 0 32px;
 }
 
 .logoWrapper {

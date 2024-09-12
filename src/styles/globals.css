@@ -1,3 +1,10 @@
+:root {
+  --primary-red: #ff3b49;
+  --primary-blue: #0000ff;
+  --light-grey: #ecedef;
+  --dark-grey: #474d57;
+}
+
 body {
   font-family: "Roboto", sans-serif;
 }

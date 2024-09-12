@@ -1,7 +1,6 @@
 .list {
   display: grid;
   gap: 32px;
-  grid-area: content;
   grid-auto-rows: 1fr;
   list-style: none;
 }
@@ -20,7 +19,7 @@
   }
 }
 
-@media (min-width: 1366px) {
+@media (min-width: 1367px) {
   .list {
     grid-template-columns: repeat(4, 1fr);
   }

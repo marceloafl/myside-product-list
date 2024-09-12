@@ -11,7 +11,7 @@
 }
 
 .price {
-  color: #0000ff;
+  color: var(--primary-blue);
   font-size: 20px;
   font-weight: 700;
 }
@@ -32,11 +32,11 @@
 
 .button {
   align-items: center;
-  background-color: #ecedef;
-  border: 1px solid #ecedef;
+  background-color: var(--light-grey);
+  border: 1px solid var(--light-grey);
   border-radius: 0.4rem;
   box-sizing: border-box;
-  color: #474d57;
+  color: var(--dark-grey);
   cursor: pointer;
   display: flex;
   font-weight: 600;
