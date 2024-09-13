@@ -25,7 +25,7 @@ export default function Search({
           name="search"
           className={styles.input}
           value={searchedValue}
-          placeholder="Digite uma marca ou produto"
+          placeholder="Digite o nome do produto"
           onChange={(event) => {
             handleSearchChange(event.target.value);
           }}

@@ -43,11 +43,8 @@ export default function ProductList({
     const valueLowercase = value.toLowerCase();
     setSearchedValue(value);
     if (valueLowercase) {
-      const searchResult = products.filter(
-        (product) =>
-          product.title.toLowerCase().includes(valueLowercase) ||
-          product.brand.toLowerCase().includes(valueLowercase) ||
-          product.description.toLowerCase().includes(valueLowercase)
+      const searchResult = products.filter((product) =>
+        product.title.toLowerCase().includes(valueLowercase)
       );
       setProducts(searchResult);
       return;
