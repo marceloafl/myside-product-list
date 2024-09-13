@@ -4,18 +4,28 @@ import styles from "@/components/list/search-filter/SearchAndFilter.module.css";
 
 interface SearchAndFilterProps {
   filterLabel: string;
+  searchLabel?: string;
   filterOptions: string[];
+  searchedValue: string;
   handleFilterChange: (category: string) => void;
+  handleSearchChange: (value: string) => void;
 }
 
 export default function SearchAndFilter({
   filterLabel,
+  searchLabel,
   filterOptions,
+  searchedValue,
   handleFilterChange,
+  handleSearchChange,
 }: SearchAndFilterProps) {
   return (
     <div className={styles.wrapper}>
-      <Search />
+      <Search
+        label={searchLabel}
+        handleSearchChange={handleSearchChange}
+        searchedValue={searchedValue}
+      />
       <DropdownFilter
         label={filterLabel}
         options={filterOptions}

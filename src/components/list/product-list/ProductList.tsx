@@ -19,13 +19,18 @@ export default function ProductList({
 }: ProductListProps) {
   const [category, setcategory] = useState<string>("");
   const [products, setProducts] = useState<ProductType[]>(initialProducts);
+  const [filteredProducts, setFilteredProducts] =
+    useState<ProductType[]>(initialProducts);
+  const [searchedValue, setSearchedValue] = useState("");
 
   useEffect(() => {
     const fetchProducts = async () => {
+      setSearchedValue("");
       try {
         const products = category
           ? await getProductsByCategory(category, 1)
           : await getAllProducts(1);
+        setFilteredProducts(products);
         setProducts(products);
       } catch (error) {
         console.error(error);
@@ -34,12 +39,31 @@ export default function ProductList({
     fetchProducts();
   }, [category]);
 
+  const handleSearchChange = (value: string) => {
+    const valueLowercase = value.toLowerCase();
+    setSearchedValue(value);
+    if (valueLowercase) {
+      const searchResult = products.filter(
+        (product) =>
+          product.title.toLowerCase().includes(valueLowercase) ||
+          product.brand.toLowerCase().includes(valueLowercase) ||
+          product.description.toLowerCase().includes(valueLowercase)
+      );
+      setProducts(searchResult);
+      return;
+    }
+    setProducts(filteredProducts);
+  };
+
   return (
     <>
       <SearchAndFilter
         filterLabel="Filtre por categorias:"
+        searchLabel="Pesquise por produtos:"
         filterOptions={categories}
         handleFilterChange={(category) => setcategory(category)}
+        handleSearchChange={handleSearchChange}
+        searchedValue={searchedValue}
       />
       <li className={styles.list}>
         {products.map((product) => (

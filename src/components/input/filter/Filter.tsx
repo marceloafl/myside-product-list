@@ -24,10 +24,9 @@ export default function DropdownFilter({
         onChange={(event) => {
           handleFilterChange(event.target.value);
         }}
+        defaultValue=""
       >
-        <option value="" selected>
-          Todas as categorias
-        </option>
+        <option value="">Todas as categorias</option>
         {options.map((opt, index) => (
           <option key={index} value={opt}>
             {formatUppercase(opt)}

@@ -1,7 +1,7 @@
 import { ProductType } from "@/types/product";
 
 const baseUrl = "https://fakestoreapi.in/api/products";
-const productsPerPage = 12;
+const productsPerPage = 24;
 
 export async function getAllProducts(
   page: number,

@@ -1,17 +1,36 @@
 import styles from "@/components/input/search/Search.module.css";
 import Image from "next/image";
 
-export default function Search() {
+interface SearchProps {
+  label?: string;
+  searchedValue: string;
+  handleSearchChange: (category: string) => void;
+}
+
+export default function Search({
+  label,
+  searchedValue,
+  handleSearchChange,
+}: SearchProps) {
   return (
     <div className={styles.wrapper}>
-      <Image alt="Search" src={"/icon-search.svg"} width={24} height={24} />
-      <input
-        type="search"
-        id="products-search"
-        name="search"
-        className={styles.input}
-        placeholder="Busque produtos"
-      />
+      <label htmlFor="categories" className={styles.label}>
+        {label}
+      </label>
+      <div className={styles.inputBox}>
+        <Image alt="Search" src={"/icon-search.svg"} width={16} height={16} />
+        <input
+          type="search"
+          id="products-search"
+          name="search"
+          className={styles.input}
+          value={searchedValue}
+          placeholder="Digite uma marca ou produto"
+          onChange={(event) => {
+            handleSearchChange(event.target.value);
+          }}
+        />
+      </div>
     </div>
   );
 }
