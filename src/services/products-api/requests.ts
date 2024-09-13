@@ -1,11 +1,11 @@
 import { ProductType } from "@/types/product";
 
 const baseUrl = "https://fakestoreapi.in/api/products";
-const productsPerPage = 24;
+export const resultsPerPage = 24;
 
 export async function getAllProducts(
   page: number,
-  limit = productsPerPage
+  limit = resultsPerPage
 ): Promise<ProductType[]> {
   try {
     const response = await fetch(`${baseUrl}?page=${page}&limit=${limit}`);
@@ -51,7 +51,7 @@ export async function getAllCategories() {
 export async function getProductsByCategory(
   category: string,
   page: number,
-  limit = productsPerPage
+  limit = resultsPerPage
 ): Promise<ProductType[]> {
   try {
     const response = await fetch(

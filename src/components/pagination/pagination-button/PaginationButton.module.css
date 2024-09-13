@@ -1,0 +1,18 @@
+.button {
+  padding: 8px;
+  border-radius: 8px;
+  background-color: var(--light-grey);
+  border: none;
+  cursor: pointer;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--dark-grey);
+}

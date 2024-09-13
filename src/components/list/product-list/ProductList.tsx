@@ -7,6 +7,9 @@ import {
   getAllProducts,
   getProductsByCategory,
 } from "@/services/products-api/requests";
+import Pagination from "@/components/pagination/Pagination";
+import { resultsPerPage } from "@/services/products-api/requests";
+import { scrollToTop } from "@/utils/scrollToTop";
 
 interface ProductListProps {
   initialProducts: ProductType[];
@@ -22,22 +25,34 @@ export default function ProductList({
   const [filteredProducts, setFilteredProducts] =
     useState<ProductType[]>(initialProducts);
   const [searchedValue, setSearchedValue] = useState("");
+  const [isLastPage, setIsLastPage] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
     const fetchProducts = async () => {
       setSearchedValue("");
       try {
         const products = category
-          ? await getProductsByCategory(category, 1)
-          : await getAllProducts(1);
+          ? await getProductsByCategory(category, currentPage)
+          : await getAllProducts(currentPage);
         setFilteredProducts(products);
         setProducts(products);
+        checkLastPage();
       } catch (error) {
         console.error(error);
       }
     };
     fetchProducts();
-  }, [category]);
+  }, [category, currentPage]);
+
+  const checkLastPage = () => {
+    setIsLastPage(products.length < resultsPerPage);
+  };
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    scrollToTop();
+  };
 
   const handleSearchChange = (value: string) => {
     const valueLowercase = value.toLowerCase();
@@ -67,6 +82,11 @@ export default function ProductList({
           <ProductItem key={product.id} product={product} />
         ))}
       </li>
+      <Pagination
+        currentPage={currentPage}
+        isLastPage={isLastPage}
+        handlePageChange={handlePageChange}
+      />
     </>
   );
 }
