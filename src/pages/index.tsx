@@ -11,7 +11,7 @@ interface HomeProps {
 }
 
 export default function Home({ products, categories }: HomeProps) {
-  return <ProductList products={products} categories={categories} />;
+  return <ProductList initialProducts={products} categories={categories} />;
 }
 
 export async function getStaticProps() {

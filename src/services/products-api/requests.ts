@@ -47,3 +47,20 @@ export async function getAllCategories() {
     console.error(error);
   }
 }
+
+export async function getProductsByCategory(
+  category: string,
+  page: number,
+  limit = productsPerPage
+): Promise<ProductType[]> {
+  try {
+    const response = await fetch(
+      `${baseUrl}/category?type=${category}&?page=${page}&limit=${limit}`
+    );
+    const data = await response.json();
+    return data.products;
+  } catch (error) {
+    console.error(error);
+    return [];
+  }
+}
