@@ -3,6 +3,7 @@
   box-sizing: border-box;
   display: flex;
   grid-area: header;
+  justify-content: space-between;
   padding: 0 32px;
 }
 
@@ -10,4 +11,27 @@
   height: 88px;
   position: relative;
   width: 104px;
+}
+
+.count {
+  border-radius: 50%;
+  color: #ffffff;
+  background-color: var(--primary-red);
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  transform: translate(100%, 25%);
+  z-index: 10;
+  position: relative;
+}
+
+.cartIconWrapper {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  z-index: 1;
 }

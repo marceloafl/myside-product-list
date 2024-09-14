@@ -1,10 +1,9 @@
-import Image from "next/image";
 import styles from "@/components/list/item/ProductItem.module.css";
-import { formatPrice } from "@/utils/formatPrice";
 import Link from "next/link";
 import { ProductType } from "@/types/product";
 import ProductMainInfo from "../../product-main-info/ProductMainInfo";
 import ProductImage from "@/components/product-image/ProductImage";
+import AddToCartButton from "@/components/button/add-to-cart/AddToCart";
 
 interface ProductItemProps {
   product: ProductType;
@@ -26,6 +25,7 @@ export default function ProductItem({ product }: ProductItemProps) {
           collapsed={true}
         />
       </Link>
+      <AddToCartButton product={product} />
     </ul>
   );
 }

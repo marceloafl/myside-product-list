@@ -12,7 +12,12 @@ export default function Header() {
           <Image alt="My Side" src="/myside-logo.svg" fill />
         </div>
       </Link>
-      <span>Itens no Carrinho: {cart.length}</span>
+      <div>
+        <span className={styles.count}>{cart.length}</span>
+        <div className={styles.cartIconWrapper}>
+          <Image alt="My Side" src="/shopping-bag.svg" fill />
+        </div>
+      </div>
     </header>
   );
 }
