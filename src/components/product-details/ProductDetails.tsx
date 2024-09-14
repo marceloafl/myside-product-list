@@ -6,8 +6,6 @@ import ProductTechInfo from "@/components/product-tech-info/ProductTechInfo";
 import AddToCartButton from "@/components/button/add-to-cart/AddToCart";
 import ProductImage from "@/components/product-image/ProductImage";
 
-const product = mockProducts[0];
-
 interface ProductDetailsProps {
   product: ProductType;
 }
@@ -40,7 +38,7 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
         category={product.category}
       />
       <div className={styles.buttonWrapper}>
-        <AddToCartButton />
+        <AddToCartButton product={product} />
       </div>
     </section>
   );
