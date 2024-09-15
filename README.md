@@ -71,6 +71,7 @@ Development: To start the development server and see the project in action local
 - Request Optimization: Review and improve requests to ensure faster and more efficient server responses.
 - Loading Indicators: Add skeleton screens and informative messages to keep users informed that data is being loaded and to enhance the perceived performance of the application.
 - Shopping Cart Page Development: Create a dedicated shopping cart page, allowing users to view, edit, and finalize their product selections in an intuitive and efficient manner.
+- Navigation Optimization: Enhance the experience of navigating between pages by considering filters, searches and returning to the previous page.
 
 ---
 
@@ -147,3 +148,4 @@ Desenvolvimento: Para iniciar o servidor de desenvolvimento e ver o projeto em a
 - Otimização das Requisições: Revisar e melhorar as requisições para garantir uma resposta mais rápida e eficiente do servidor.
 - Implementação de Indicadores de Carregamento: Adicionar skeleton screens e mensagens informativas para manter os usuários informados de que os dados estão sendo carregados e melhorar a percepção de desempenho da aplicação.
 - Desenvolvimento da Página de Carrinho de Compras: Criar uma página dedicada ao carrinho de compras, permitindo que os usuários visualizem, editem e finalizem suas seleções de produtos de forma intuitiva e eficiente.
+- Otimização de navegação: Melhorar a experiência na navegação entre páginas considerando filtros, pesquisas e retorno para a página anterior.
