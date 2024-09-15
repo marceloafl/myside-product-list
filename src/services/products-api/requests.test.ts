@@ -1,5 +1,4 @@
 import fetchMock from "jest-fetch-mock";
-import { ProductType } from "@/types/product";
 import {
   getAllCategories,
   getAllProducts,
