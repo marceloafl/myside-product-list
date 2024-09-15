@@ -11,4 +11,13 @@ describe("Header Component tests", () => {
   it("should render image properly", () => {
     expect(screen.getByAltText("My Side")).toBeInTheDocument();
   });
+
+  it("should render the cart icon properly", () => {
+    render(
+      <CartProvider>
+        <Header />
+      </CartProvider>
+    );
+    expect(screen.getByAltText("Carrinho")).toBeInTheDocument();
+  });
 });
