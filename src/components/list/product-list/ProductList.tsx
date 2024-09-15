@@ -77,7 +77,7 @@ export default function ProductList({
         handleSearchChange={handleSearchChange}
         searchedValue={searchedValue}
       />
-      <li className={styles.list}>
+      <li className={styles.list} data-testid="products-list">
         {products.map((product) => (
           <ProductItem key={product.id} product={product} />
         ))}

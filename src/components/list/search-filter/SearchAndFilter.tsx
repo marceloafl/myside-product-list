@@ -20,7 +20,7 @@ export default function SearchAndFilter({
   handleSearchChange,
 }: SearchAndFilterProps) {
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} data-testid="search-and-filter">
       <Search
         label={searchLabel}
         handleSearchChange={handleSearchChange}

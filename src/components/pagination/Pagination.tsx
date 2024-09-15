@@ -13,7 +13,7 @@ export default function Pagination({
   handlePageChange,
 }: PaginationProps) {
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} data-testid="pagination">
       <PaginationButton
         label="<"
         disable={currentPage === 1}

@@ -14,7 +14,10 @@ export default function ProductImage({
 }: ProductImageProps) {
   const imageSize = styles[page] || styles.mainPage;
   return (
-    <div className={`${styles.wrapper} ${imageSize}`}>
+    <div
+      className={`${styles.wrapper} ${imageSize}`}
+      data-testid="product-main-image"
+    >
       <Image
         alt={alt}
         src={imageSrc}

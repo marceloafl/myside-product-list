@@ -17,7 +17,7 @@ export default function ProductMainInfo({
   handleCollapse,
 }: ProductInfoProps) {
   return (
-    <section className={styles.wrapper}>
+    <section className={styles.wrapper} data-testid="product-main-info">
       <h2 className={styles.title}>{title}</h2>
       <p className={styles.price}>{formatPrice(price)}</p>
       <div>

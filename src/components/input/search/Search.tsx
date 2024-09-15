@@ -14,14 +14,14 @@ export default function Search({
 }: SearchProps) {
   return (
     <div className={styles.wrapper}>
-      <label htmlFor="categories" className={styles.label}>
+      <label htmlFor="search" className={styles.label}>
         {label}
       </label>
       <div className={styles.inputBox}>
         <Image alt="Search" src={"/icon-search.svg"} width={16} height={16} />
         <input
           type="search"
-          id="products-search"
+          id="search"
           name="search"
           className={styles.input}
           value={searchedValue}
