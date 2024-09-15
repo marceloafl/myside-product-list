@@ -15,7 +15,7 @@ export default function Header() {
       <div>
         <span className={styles.count}>{cart.length}</span>
         <div className={styles.cartIconWrapper}>
-          <Image alt="My Side" src="/shopping-bag.svg" fill />
+          <Image alt="Carrinho" src="/shopping-bag.svg" fill />
         </div>
       </div>
     </header>
